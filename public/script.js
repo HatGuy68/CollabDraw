@@ -6,7 +6,7 @@ CANVAS.width = window.innerWidth * 0.98;
 CANVAS.height = window.innerHeight * 0.96;
 
 
-var io = io();
+var io = io.connect("https://pure-shore-57484.herokuapp.com/");
 
 io.on("onpropogate", (data) => {
     CTX.lineTo(data.x, data.y);
