@@ -6,14 +6,14 @@ CANVAS.width = window.innerWidth * 0.98;
 CANVAS.height = window.innerHeight * 0.96;
 
 
-var io = io.connect("https://pure-shore-57484.herokuapp.com/");
+var socket = io('https://agile-springs-94008.herokuapp.com/');
 
-io.on("onpropogate", (data) => {
+socket.on("onpropogate", (data) => {
     CTX.lineTo(data.x, data.y);
     CTX.stroke();
 });
 
-io.on("ondown", (data) => {
+socket.on("ondown", (data) => {
     CTX.moveTo(data.x, data.y);
 });
 
