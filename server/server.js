@@ -4,7 +4,7 @@ const httpServer = require("http").createServer(app);
 const io = require("socket.io")(httpServer);
 const cors = require('cors');
 
-app.use(cors());
+app.use(cors({ origin: 'https://suspicious-morse-75b05b.netlify.app/' }));
 
 connections = [];
 
