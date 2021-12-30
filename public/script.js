@@ -5,7 +5,8 @@ let mouseDown = touchStart = false;
 CANVAS.width = window.innerWidth * 0.98;
 CANVAS.height = window.innerHeight * 0.96;
 
-var io = io.connect('http://localhost:8080/');
+
+var io = io();
 
 io.on("onpropogate", (data) => {
     CTX.lineTo(data.x, data.y);
