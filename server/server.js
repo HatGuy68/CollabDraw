@@ -1,14 +1,12 @@
 const express = require("express");
 const app = express();
 const httpServer = require("http").createServer(app);
-const cors = require('cors');
 const io = require("socket.io")(httpServer, {
     cors: {
         origin: '*',
     }
 });
 
-app.use(cors({ origin: 'https://suspicious-morse-75b05b.netlify.app/' }));
 
 connections = [];
 
