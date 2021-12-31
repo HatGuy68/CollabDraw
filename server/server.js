@@ -2,9 +2,7 @@ const express = require("express");
 const app = express();
 const httpServer = require("http").createServer(app);
 const io = require("socket.io")(httpServer, {
-    cors: {
-        origin: '*',
-    }
+    cors: '*'
 });
 
 
@@ -19,6 +17,12 @@ io.on('connect', (socket) => {
             if (con.id !== socket.id) {
                 con.emit("onpropogate", data);
             }
+        });
+    });
+
+    socket.on("clear", () => {
+        connections.map((con) => {
+            con.emit("onclear");
         });
     });
 

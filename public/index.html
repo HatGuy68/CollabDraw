@@ -5,19 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./style.css">
     <title>Collab Draw</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            overflow: hidden;
-        }
-    </style>
 </head>
 
 <body>
+    <div id="circularMenu" class="circular-menu">
+
+        <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+            <i class="fa fa-plus"></i>
+        </a>
+
+        <menu class="items-wrapper">
+            <i id="insert" class="menu-item fa fa-image inactive" title="Insert Image (inactive)"></i>
+            <i id="clear" class="menu-item fa fa-trash" title="Clear Board"></i>
+            <i id="draw" class="menu-item fa fa-pencil inactive" title="Drawing Pen (inactive)"></i>
+            <i id="text" class="menu-item fa fa-font inactive" title="Text Box (inactive)"></i>
+        </menu>
+
+    </div>
+
     <canvas id="canvas"></canvas>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
     <script src="./index.js"></script>
