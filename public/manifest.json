@@ -1,0 +1,12 @@
+{
+    "name": "Collab Draw",
+    "short_name": "Collab Draw",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "Sketch together in real time",
+    "icons": [{
+        "src": "images/windows/windows.svg",
+        "sizes": "any"
+    }]
+}
